@@ -6,7 +6,7 @@ Add FUXA to your Home Assistant. It is an easy web-based Process Visualization (
 ## FUXA
 FUXA is a web-based Process Visualization (SCADA/HMI/Dashboard) software. With FUXA you can create modern process visualizations with individual designs for your machines and real-time data display.
 
-![fuxa editor](https://raw.githubusercontent.com/8OND007/FUXA/main/screenshot/fuxa-editor.png) 
+![fuxa editor](https://raw.githubusercontent.com/8OND007/FUXA-HA/main/screenshot/fuxa-editor.png) 
 
 ![fuxa ani](https://raw.githubusercontent.com/8OND007/FUXA-HA/main/screenshot/fuxa-ani.gif)
 
