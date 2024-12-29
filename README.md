@@ -44,8 +44,6 @@ Add this Repository `https://github.com/8OND007/FUXA-HA/` manually or click here
 - You can use `homeasssitant.local:1881` (just replace the `:8123` with `:1881`)
 - Have fun! 
 
-![fuxa Add to Add on Store Home Assistant](https://raw.githubusercontent.com/8OND007/FUXA-HA/main/screenshot/Accessing-on-Home-Assistant.gif)
-
 ## Implement it into Home Assistant Dashboard using iframe (website card)
 You can use the https://www.home-assistant.io/dashboards/iframe/ Lovelace card, this is only possible locally on a HTTP HA instance. HTTPS does not allow iframes to HTTP content.
 
