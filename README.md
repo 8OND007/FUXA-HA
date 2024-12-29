@@ -37,8 +37,6 @@ Add this Repository `https://github.com/8OND007/FUXA-HA/` manually or click here
 - Click on it
 - Install the Add-on
 
- ![fuxa Add to Add on Store Home Assistant](https://raw.githubusercontent.com/8OND007/FUXA-HA/main/screenshot/Installing-FUXA-on-Home-Assistant-Add-on-Store.gif)
-
 ## Start the Add-on and use FUXA
 - Press `Start`
 - Check the `Logs`
