@@ -1,11 +1,14 @@
-name: "FUXA-HA"
+name: "FUXA"
 description: "Easy and Web-based Process Visualization (SCADA/HMI/Dashboard) software - now for Home Assistant"
-version: "1.0.0"
-url: "https://github.com/8OND007/FUXA-HA/"
-slug: "fuxa-slr"
+url: "https://github.com/8OND007/FUXA/"
+image: "frangoteam/fuxa"
+version: "1.2.1"
+slug: "fuxa"
 webui: "http://[HOST]:[PORT:1881]/home"
-panel_icon: mdi:dog
-panel_title: FUXA
+environment:
+  LOG_LEVEL: "info"
+options: {}
+schema: {}
 init: false
 arch:
   - aarch64
@@ -14,11 +17,18 @@ arch:
   - armv7
   - i386
 map:
-  - /usr/src/app/FUXA/server/_appdata:share:rw
-  - addons:rw
-  - config:rw
+  - type: addon_config   # /Share under HA Samba map "addon_configs"
+    read_only: False
+    path: /usr/src/app/FUXA/server/_appdata
+  - type: share   # /Share under HA Samba map "share"
+    read_only: False
+    path: /usr/src/app/FUXA/server/_db
+  - type: media   # /Share under HA Samba map "media"
+    read_only: False
+    path: /usr/src/app/FUXA/server/_images
+  - type: share   # /Share under HA Samba map "share"
+    read_only: False
+    path: /usr/src/app/FUXA/server/_logs
 startup: services
 ports:
   1881/tcp: 1881
-ingress: true
-ingress_port: 1881
