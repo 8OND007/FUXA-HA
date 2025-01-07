@@ -23,14 +23,12 @@ map:
   - type: share   # /Share under HA Samba map "share"
     read_only: False
     path: /usr/src/app/FUXA/server/_db
-    target: fuxa_db
   - type: media   # /Share under HA Samba map "media"
     read_only: False
     path: /usr/src/app/FUXA/server/_images
   - type: share   # /Share under HA Samba map "share"
     read_only: False
     path: /usr/src/app/FUXA/server/_logs
-    target: fuxa_logs
 startup: services
 ports:
   1881/tcp: 1881
