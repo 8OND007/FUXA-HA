@@ -1,6 +1,6 @@
 name: "FUXA"
 description: "Easy and Web-based Process Visualization (SCADA/HMI/Dashboard) software - now for Home Assistant"
-url: "https://github.com/8OND007/FUXA/"
+url: "https://github.com/8OND007/FUXA-HA/"
 image: "frangoteam/fuxa"
 version: "1.2.6"
 slug: "fuxa"
