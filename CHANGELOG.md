@@ -27,3 +27,7 @@
 ## 1.2.6
 
 - version Docker on 2025/07/06
+
+## 1.2.7
+
+- version Docker on 2025/10/03
