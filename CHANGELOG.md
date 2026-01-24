@@ -34,4 +34,4 @@
 
 ## 1.2.9
 
-- version Docker on 2026/01/22
+- version Docker on 2026/01/22 (skipped version 1.2.8 since it broke Ingress option to view remotely on Home Assistant, version 1.2.9 seems to be fixed on this issue)
