@@ -35,7 +35,7 @@ ingress:
       # 2. Rewrite for API calls (e.g., /api/project)
       - mode: body
         match: >-
-          (/api/projectData|/api/project|/api/screen|/api/settings|/api/screen|/api/resources|/api/heartbeat)
+          (/api/projectData|/api/project|/api/screen|/api/settings|/api/screen|/api/resources|/api/heartbeat|/api/scheduler)
         replace: >-
           $http_x_ingress_path\1
       # 3. Rewrite for socket.io requests
