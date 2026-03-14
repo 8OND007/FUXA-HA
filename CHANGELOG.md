@@ -42,3 +42,7 @@ You can only view and use (runtime) Fuxa remotely with Ingress, trying to save a
 
 - version Docker on 2026/02/08 (skipped version 1.2.10).
 upgrade versions prior to 1.2.11 because of vulnerability CVE-2026-25951
+
+## 1.3.0
+
+- version Docker on 2026/03/05
