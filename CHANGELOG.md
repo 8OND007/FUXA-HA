@@ -54,3 +54,7 @@ upgrade versions prior to 1.2.11 because of vulnerability CVE-2026-25951
 ## 1.3.2
 
 - version Docker on 2026/05/19
+
+## 1.3.3
+
+- version Docker on 2026/06/23
