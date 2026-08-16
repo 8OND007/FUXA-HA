@@ -1,7 +1,10 @@
-#!/usr/bin/with-contenv bashio
+#!/bin/sh
 
-export BASE_PATH="$(bashio::config 'BASE_PATH')"
+set -e
 
-echo "Starting FUXA with BASE_PATH=${BASE_PATH}"
+export BASE_PATH="$(node -p "require('/data/options.json').BASE_PATH")"
+
+echo "Starting FUXA"
+echo "BASE_PATH=${BASE_PATH}"
 
 exec npm start
