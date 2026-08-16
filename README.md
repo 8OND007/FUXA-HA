@@ -23,7 +23,7 @@ Here is a [live demo](https://frangoteam.github.io) example of FUXA editor.
 ## Add custom Repository to Home Assistant
 Add this Repository `https://github.com/8OND007/FUXA-HA/` manually or click here to add it via `my Home Assistant`:
 
-[![Open your Home Assistant instance and show the dashboard of an app.](https://my.home-assistant.io/badges/supervisor_addon.svg)](https://my.home-assistant.io/redirect/supervisor_addon/?addon=516c7c6f_fuxa&repository_url=https%3A%2F%2Fgithub.com%2F8OND007%2FFUXA-HA%2F)
+[![Open your Home Assistant instance and show the dashboard of an app.](https://my.home-assistant.io/badges/supervisor_addon.svg)](https://my.home-assistant.io/redirect/supervisor_addon/?addon=9aa46cf0_fuxa&repository_url=https%3A%2F%2Fgithub.com%2F8OND007%2FFUXA-HA%2F)
 
 ### Here is how you do it
 - Go to Settings, then to Apps
@@ -58,23 +58,23 @@ ingress:
     title: FUXA
     work_mode: ingress
     url: http://localhost:1881
-    index: /
+    index: /fuxa/home
     icon: mdi:monitor-dashboard
-    disable_stream: True
+    require_admin: true
     rewrite:
-      # 1. Rewrite the <base> tag in the body section
+      # 1. Rewrite FUXA <base> path
       - mode: body
         match: >-
-          <base href="\/">
+          <base href="\/fuxa\/" />
         replace: >-
-          <base href="$http_x_ingress_path/">
-      # 2. Rewrite for API calls (e.g., /api/project)
+          <base href="$http_x_ingress_path/fuxa/" />
+      # 2. Rewrite FUXA API cal (/script does not work)l    s
       - mode: body
         match: >-
-          (/api/projectData|/api/project|/api/screen|/api/settings|/api/screen|/api/resources|/api/heartbeat)
+          (/api/project|/api/projectData|/api/screen|/api/refresh|/api/settings|/api/screen|/api/resources|/api/heartbeat|/api/scheduler|/home|/home/:viewName|/lab|/editor|/device|/plugins|/rodevice|/users|/view|/_images|/_widgets|/snapshots|/hmi|/graph|/chart|/alarm|/notification|/language|/report|/maps|/client-access|/ar|/_helpers/utils)
         replace: >-
           $http_x_ingress_path\1
-      # 3. Rewrite for socket.io requests
+      # 3. Rewrite Socket.IO requests
       - mode: body
         match: >-
           /socket\.io
