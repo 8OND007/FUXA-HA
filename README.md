@@ -68,7 +68,7 @@ ingress:
           <base href="\/fuxa\/" />
         replace: >-
           <base href="$http_x_ingress_path/fuxa/" />
-      # 2. Rewrite FUXA API cal (/script does not work)l    s
+      # 2. Rewrite FUXA API cal (/script does not work)
       - mode: body
         match: >-
           (/api/project|/api/projectData|/api/screen|/api/refresh|/api/settings|/api/screen|/api/resources|/api/heartbeat|/api/scheduler|/home|/home/:viewName|/lab|/editor|/device|/plugins|/rodevice|/users|/view|/_images|/_widgets|/snapshots|/hmi|/graph|/chart|/alarm|/notification|/language|/report|/maps|/client-access|/ar|/_helpers/utils)
