@@ -8,10 +8,10 @@ slug: "fuxa"
 webui: "http://[HOST]:[PORT:1881]/home"
 environment:
   LOG_LEVEL: "info"
-environment_vars:
+options:
   BASE_PATH: "/fuxa"
-options: {}
-schema: {}
+schema:
+  BASE_PATH: str
 init: false
 arch:
   - aarch64
