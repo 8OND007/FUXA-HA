@@ -5,7 +5,7 @@ documentation: "https://github.com/8OND007/FUXA-HA#readme"
 #image: "frangoteam/fuxa"
 version: "1.3.4"
 slug: "fuxa"
-webui: "http://[HOST]:[PORT:1881]/home"
+webui: "http://[HOST]:[PORT:1881]/fuxa/home"
 environment:
   LOG_LEVEL: "info"
 options:
