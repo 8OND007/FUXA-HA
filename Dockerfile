@@ -6,4 +6,4 @@ COPY run.sh /run.sh
 RUN chmod +x /run.sh
 
 # Start FUXA
-ENTRYPOINT ["/run.sh"]
+CMD ["/run.sh"]
