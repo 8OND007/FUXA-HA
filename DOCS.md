@@ -22,28 +22,19 @@ ingress:
     title: FUXA
     work_mode: ingress
     url: http://localhost:1881
-    index: /
+    index: /fuxa
     icon: mdi:monitor-dashboard
-    disable_stream: True
+    require_admin: true
     rewrite:
-      # 1. Rewrite the <base> tag in the body section
+      # 1. Rewrite FUXA <base> path
       - mode: body
         match: >-
-          <base href="\/">
+          <base href="\/fuxa\/" />
         replace: >-
-          <base href="$http_x_ingress_path/">
-      # 2. Rewrite for API calls (e.g., /api/project)
+          <base href="$http_x_ingress_path/fuxa/" />
+      # 2. Rewrite FUXA API cal (/script does not work)
       - mode: body
         match: >-
-          (/api/projectData|/api/project|/api/screen|/api/settings|/api/screen|/api/resources|/api/heartbeat|/api/scheduler)
-        replace: >-
-          $http_x_ingress_path\1
-      # 3. Rewrite for socket.io requests
-      - mode: body
-        match: >-
-          /socket\.io
-        replace: >-
-          $http_x_ingress_path/socket\.io
 ```
 # Source
 https://github.com/8OND007/FUXA-HA
