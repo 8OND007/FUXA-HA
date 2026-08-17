@@ -32,21 +32,21 @@ map:
   - type: media   # /Share under HA Samba map "media"
     read_only: False
     path: /usr/src/app/FUXA/server/_images
-  - type: media   # /Share under HA Samba map "media"
-    read_only: False
-    path: /usr/src/app/FUXA/server/_webcam_snapshots
+#  - type: media   # /Share under HA Samba map "media"
+#    read_only: False
+#    path: /usr/src/app/FUXA/server/_webcam_snapshots
 #  - type: media   # /Share under HA Samba map "media"
 #    read_only: False
 #    path: /usr/src/app/FUXA/client/assets/lib/svgeditor/shapes
   - type: share   # /Share under HA Samba map "share"
     read_only: False
     path: /usr/src/app/FUXA/server/_logs
-  - type: share   # /Share under HA Samba map "share"
-    read_only: False
-    path: /usr/src/app/FUXA/server/_reports
-  - type: share   # /Share under HA Samba map "share"
-    read_only: False
-    path: /usr/src/app/FUXA/server/_widgets
+#  - type: share   # /Share under HA Samba map "share"
+#    read_only: False
+#    path: /usr/src/app/FUXA/server/_reports
+#  - type: share   # /Share under HA Samba map "share"
+#    read_only: False
+#    path: /usr/src/app/FUXA/server/_widgets
 startup: services
 ports:
   1881/tcp: 1881
