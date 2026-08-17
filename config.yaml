@@ -26,9 +26,9 @@ map:
   - type: share   # /Share under HA Samba map "share"
     read_only: False
     path: /usr/src/app/FUXA/server/_db
-#  - type: share   # /Share under HA Samba map "share"
-#    read_only: False
-#    path: /usr/src/app/FUXA/server/_pkg
+  - type: share   # /Share under HA Samba map "share"
+    read_only: False
+    path: /usr/src/app/FUXA/server/_pkg
   - type: share   # /Share under HA Samba map "share"
     read_only: False
     path: /usr/src/app/FUXA/server/_logs
