@@ -35,6 +35,15 @@ ingress:
       # 2. Rewrite FUXA API cal (/script does not work)
       - mode: body
         match: >-
+          (/api/project|/api/projectData|/api/screen|/api/refresh|/api/settings|/api/screen|/api/resources|/api/heartbeat|/api/scheduler|/home|/home/:viewName|/lab|/editor|/device|/plugins|/rodevice|/users|/view|/_images|/_widgets|/snapshots|/hmi|/graph|/chart|/alarm|/notification|/language|/report|/maps|/client-access|/ar|/_helpers/utils)
+        replace: >-
+          $http_x_ingress_path\1
+      # 3. Rewrite Socket.IO requests
+      - mode: body
+        match: >-
+          /socket\.io
+        replace: >-
+          $http_x_ingress_path/socket\.io
 ```
 # Source
 https://github.com/8OND007/FUXA-HA
