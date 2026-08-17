@@ -58,7 +58,7 @@ ingress:
     title: FUXA
     work_mode: ingress
     url: http://localhost:1881
-    index: /fuxa/home
+    index: /fuxa
     icon: mdi:monitor-dashboard
     require_admin: true
     rewrite:
